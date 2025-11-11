@@ -3,8 +3,11 @@ import { Layout, Space, Typography, Segmented, Button, Badge, Popover, List, Ava
 import { PlusOutlined, BellOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import { useAppContext } from '../../context/AppContext';
 import { forxitePalette } from '../../theme';
+
+dayjs.extend(relativeTime);
 
 export const AppHeader = () => {
   const navigate = useNavigate();
